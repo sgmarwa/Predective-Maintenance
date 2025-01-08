@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predictive Maintenance</h1>
+        <form id="prediction-form">
+            <div class="form-group">
+                <label for="Air_temperature">Air temperature [K]:</label>
+                <input type="number" id="Air_temperature" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Process_temperature">Process temperature [K]:</label>
+                <input type="number" id="Process_temperature" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="rotational_speed">Rotational Speed (rpm):</label>
+                <input type="number" id="rotational_speed" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="torque">Torque (Nm):</label>
+                <input type="number" id="torque" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="tool_wear">Tool Wear (min):</label>
+                <input type="number" id="tool_wear" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="power">Power (W):</label>
+                <input type="number" id="power" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Temperature_difference">Temperature difference [k]:</label>
+                <input type="number" id="Temperature_difference" step="any" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Prediction Result</h2>
+            <p id="prediction"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
 
